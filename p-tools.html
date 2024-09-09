@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/letter-p.svg">
+    <link rel="stylesheet" href="/funkcja.css">
+    <title>P-Tools</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="/p-tools.html" class="logo_container">
+            <img class="paslawski_logo" width="50" height="50" src="/letter-p.svg" alt="Paslawski logo">
+            <h1 class="paslawski_logo_headline">Paslawski Tool</h1>
+        </a>
+    </header>
+
+    <!-- Main -->
+     <main>
+        <button id="btnOpen" type="button" class="tool_button">UAA Convertion Rate Calculator</button>
+     </main>
+
+     <!-- Modal -->
+     <div>
+        <form class="modal_content">
+            <label for="liczbaUAA">Pozostała liczba UAA:</label>
+            <input type="number" id="liczbaUAA" name="liczbaUAA">
+            <label for="prawdopodobienstwo">UAA Convertion Rate (%):</label>
+            <input type="number" id="prawdopodobienstwo" name="prawdopodobienstwo">
+            <button type="button" onclick="oblicz()">Oblicz</button>
+            <p>Wynik: <span id="wynik"></span></p>
+         </form>
+    </div>
+
+     <!-- Footer -->
+     <footer>
+        <img class="paslawski_logo" width="50" height="50" src="/letter-p.svg" alt="Paslawski logo">
+     </footer>
+
+    <!-- Funkcje -->
+    <script src="/UAA_conv_rate_calc.js"></script>
+</body>
+</html>
