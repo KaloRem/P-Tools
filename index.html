@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./letter-p.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/funkcja.css">
     <title>P-Tools</title>
 </head>
@@ -12,33 +15,31 @@
     <header class="header">
         <a href="/index.html" class="logo_container">
             <img class="paslawski_logo" width="50" height="50" src="/letter-p.svg" alt="Paslawski logo">
-            <h1 class="paslawski_logo_headline">Paslawski Tool</h1>
+            <h1 class="paslawski_logo_headline">-Tools</h1>
         </a>
     </header>
 
     <!-- Main -->
-     <main>
-        <button id="btnOpen" type="button" class="tool_button">UAA Convertion Rate Calculator</button>
+     <main class="main">
+        <div class="tool_button_container">
+            <button id="btnOpen" type="button" class="tool_button">UAA Convertion Rate Calculator</button>
+        </div>
      </main>
 
      <!-- Modal -->
-     <div>
+     <div id="modal" class="modal">
         <form class="modal_content">
-            <label for="liczbaUAA">Pozostała liczba UAA:</label>
-            <input type="number" id="liczbaUAA" name="liczbaUAA">
-            <label for="prawdopodobienstwo">UAA Convertion Rate (%):</label>
-            <input type="number" id="prawdopodobienstwo" name="prawdopodobienstwo">
-            <button type="button" onclick="oblicz()">Oblicz</button>
-            <p>Wynik: <span id="wynik"></span></p>
-         </form>
+            <img src="/letter-p.svg" alt="P-Tools logo" width="50" height="50">
+            <input class="input" type="number" id="liczbaUAA" name="liczbaUAA" placeholder="Pozostała liczba UAA:">
+            <input class="input" type="number" id="prawdopodobienstwo" name="prawdopodobienstwo" placeholder="UAA Convertion Rate (%):">
+            <div class="result_container"><p class="result">Wynik: <span class="result_span" id="wynik"></span></p></div>
+            <button class="modal_form_button" type="button" onclick="oblicz()">Oblicz</button>
+            <button class="modal_form_button" id="btnClose" type="button">Zamknij</button>
+        </form>
     </div>
-
-     <!-- Footer -->
-     <footer>
-        <img class="paslawski_logo" width="50" height="50" src="/letter-p.svg" alt="Paslawski logo">
-     </footer>
 
     <!-- Funkcje -->
     <script src="/uaa_conv_rate_calc.js"></script>
+    <script src="/modal.js"></script>
 </body>
 </html>

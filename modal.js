@@ -14,6 +14,6 @@ modalClose.onclick = function () {
   modal.style.display = "none";
 };
 
-// Dodawanie event listenerów
-modalOpen.addEventListener("click", openModal);
-modalClose.addEventListener("click", closeModal);
+// // Dodawanie event listenerów
+// modalOpen.addEventListener("click", openModal);
+// modalClose.addEventListener("click", closeModal);
